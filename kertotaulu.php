@@ -41,7 +41,7 @@
         ?><br>
         <?php
             if (empty ($_POST["kerrottava"]) or $_POST["kerrottava"] == -0 or $_POST["kerrottava"] == 0) {
-                echo "Et syöttänyt lukuja!!!";
+                echo "Et syöttänyt lukua!!!";
             } else {
                 for ($numero=1; $numero <= 10; $numero++) { 
                     echo $numero * $_POST["kerrottava"] . "<br>";
