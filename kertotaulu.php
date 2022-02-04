@@ -19,8 +19,12 @@
             <input type="submit" value="Lähetä">
         </form>
     <?php
-        for ($numero=1; $numero <= 10; $numero++) { 
-            echo $numero * $_POST["kerrottava"] . "<br>";
+        if (empty ($_POST["kerrottava"])) {
+            echo "Et syöttänyt lukuja!!!";
+        } else {
+            for ($numero=1; $numero <= 10; $numero++) { 
+                echo $numero * $_POST["kerrottava"] . "<br>";
+            }
         }
     ?>
 </body>
