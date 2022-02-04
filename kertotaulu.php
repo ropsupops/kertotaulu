@@ -33,14 +33,14 @@
 
     <p>
         <?php
-            if (empty ($_POST["kerrottava"])){
+            if (empty ($_POST["kerrottava"]) or $_POST["kerrottava"] == -0 or $_POST["kerrottava"] == 0){
                 echo "";
             } else {
                 echo "Luvun <span id=\"bold\">" . $_POST["kerrottava"] . "</span> kertotaulu";
             }  
         ?><br>
         <?php
-            if (empty ($_POST["kerrottava"])) {
+            if (empty ($_POST["kerrottava"]) or $_POST["kerrottava"] == -0 or $_POST["kerrottava"] == 0) {
                 echo "Et syöttänyt lukuja!!!";
             } else {
                 for ($numero=1; $numero <= 10; $numero++) { 
